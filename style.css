@@ -1,0 +1,163 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #2c2c2c;
+  }
+  
+  /* Topo do site */
+  .topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .topo h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .topo nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .topo nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .topo nav a:hover {
+    color: #d4af37; /* Dourado elegante */
+  }
+  
+  /* Seção Sobre a Loja */
+  .sobre-loja {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: center;
+  }
+  
+  .sobre-loja img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sobre-loja .texto {
+    flex: 1;
+  }
+  
+  .sobre-loja h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+  }
+  
+  .sobre-loja p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Seção Produtos */
+  .produtos {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  .produto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .produto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .produto img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  .produto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .produto p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .produto button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .produto button:hover {
+    background-color: #333;
+  }
+  
+  /* Responsividade */
+  @media (min-width: 1024px) {
+    .sobre-loja {
+      flex-direction: row;
+    }
+    .produtos {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .sobre-loja {
+      flex-direction: row;
+    }
+    .produtos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .sobre-loja {
+      flex-direction: column;
+    }
+    .produtos {
+      grid-template-columns: 1fr;
+    }
+  }
